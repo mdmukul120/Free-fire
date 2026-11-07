@@ -1,0 +1,6 @@
+{
+  "name": "Rohan battel club",
+  "description": "Rohan battel club - 3D action Free Fire style combat arena starring Rohan. Developed by Mukul Ahmed (মুকুল আহমেদ)।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

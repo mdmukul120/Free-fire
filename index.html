@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="bn" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#ff4655" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="RohanClub" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pwa-512x512.png" />
+    
+    <title>Rohan battel club - 3D Action Free Fire Arena</title>
+    <meta name="description" content="Rohan battel club - বাংলা ভয়েস লাইন ও অ্যাকশন সমৃদ্ধ 3D ব্যাটেল অ্যারেনা গেম। ডেভেলপার: মুকুল আহমেদ।" />
+    <meta property="og:title" content="Rohan battel club" />
+    <meta property="og:description" content="Rohan battel club - 3D Action Free Fire Arena. ডেভেলপার: মুকুল আহমেদ।" />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@600;700;800&family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" crossorigin href="/assets/index-CBP8Ksde.css">
+
+    <style>
+      /* Free Fire Style Rohan battel club Opening Intro */
+      #rohan-game-intro {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background: #03050a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        user-select: none;
+        transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s ease;
+        font-family: 'Hind Siliguri', 'Rajdhani', sans-serif;
+      }
+
+      .ff-pulse-glow {
+        animation: ff-glow-surge 2.2s infinite ease-in-out;
+      }
+
+      @keyframes ff-glow-surge {
+        0%, 100% {
+          filter: drop-shadow(0 0 20px rgba(255, 70, 85, 0.8)) drop-shadow(0 0 45px rgba(245, 158, 11, 0.6));
+          transform: scale(1);
+        }
+        50% {
+          filter: drop-shadow(0 0 35px rgba(255, 70, 85, 1)) drop-shadow(0 0 80px rgba(245, 158, 11, 0.9));
+          transform: scale(1.03);
+        }
+      }
+
+      @keyframes ff-scanner {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(200%); }
+      }
+
+      .ff-laser-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ff4655, #fbbf24, #ff4655, transparent);
+        animation: ff-scanner 2.5s infinite linear;
+      }
+
+      /* Clean Top PWA Install Bar */
+      #pwa-install-banner {
+        position: fixed;
+        top: 14px;
+        right: 18px;
+        z-index: 99999;
+        display: none;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 12px;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(255, 70, 85, 0.5);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 70, 85, 0.3);
+        transition: all 0.2s ease;
+      }
+
+      #pwa-install-banner:hover {
+        transform: scale(1.04);
+        border-color: #ff4655;
+      }
+    </style>
+  </head>
+  <body class="bg-[#07090e] text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950 overflow-hidden select-none m-0 p-0">
+    
+    <!-- 1. FREE FIRE STYLE OPENING ANIMATION FOR "ROHAN BATTEL CLUB" -->
+    <div id="rohan-game-intro">
+      <div class="ff-laser-line"></div>
+      
+      <!-- Background Cyber Atmosphere -->
+      <div style="position: absolute; inset: -40%; background: radial-gradient(circle, rgba(255,70,85,0.22) 0%, rgba(245,158,11,0.08) 35%, transparent 65%); pointer-events: none;"></div>
+
+      <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px;">
+        
+        <!-- Rohan Anime Character Avatar Badge -->
+        <div class="ff-pulse-glow" style="position: relative; width: 125px; height: 125px; border-radius: 28px; background: linear-gradient(135deg, #ff4655, #f59e0b); padding: 3px; margin-bottom: 20px; box-shadow: 0 0 45px rgba(255,70,85,0.8);">
+          <div style="width: 100%; height: 100%; background: #060814; border-radius: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+            <img 
+              src="/assets/aistudio/hero_freak_22_2f58a03c.png" 
+              alt="Rohan" 
+              style="width: 100%; height: 100%; object-fit: cover;"
+            />
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); font-family: 'Orbitron', monospace; font-size: 10px; font-weight: 900; color: #fbbf24; padding: 2px 0;">
+              ROHAN
+            </div>
+          </div>
+        </div>
+
+        <!-- Free Fire Style Badge -->
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 16px; border-radius: 50px; background: rgba(255,70,85,0.2); border: 1px solid rgba(255,70,85,0.45); color: #fca5a5; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">
+          <span>🔥</span>
+          <span>FREE FIRE STYLE 3D BATTLE ARENA</span>
+          <span>🔥</span>
+        </div>
+
+        <!-- Game Title: Rohan battel club -->
+        <h1 style="font-family: 'Orbitron', 'Hind Siliguri', sans-serif; font-size: 46px; font-weight: 900; margin: 0; background: linear-gradient(90deg, #ff4655, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 35px rgba(255,70,85,0.9); line-height: 1.1; letter-spacing: 2px;">
+          Rohan battel club
+        </h1>
+
+        <div style="font-family: 'Hind Siliguri', sans-serif; font-size: 18px; font-weight: 700; color: #f8fafc; margin-top: 6px; letter-spacing: 1px;">
+          রোহান ব্যাটল ক্লাব
+        </div>
+
+        <!-- Developer Credit: মুকুল আহমেদ -->
+        <div style="margin-top: 14px; padding: 6px 18px; border-radius: 12px; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(245, 158, 11, 0.4); display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 14px;">👑</span>
+          <span style="font-size: 13px; font-weight: 700; color: #fbbf24; font-family: 'Hind Siliguri', sans-serif;">
+            ডেভেলপার: মুকুল আহমেদ
+          </span>
+          <span style="font-size: 11px; color: #94a3b8; font-family: 'Orbitron', sans-serif;">
+            (Mukul Ahmed)
+          </span>
+        </div>
+
+        <!-- Audio Visualizer -->
+        <div style="display: flex; align-items: flex-end; gap: 4px; height: 24px; margin-top: 22px;">
+          <div style="width: 4px; height: 40%; background: #ff4655; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 85%; background: #f59e0b; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 100%; background: #ff4655; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 60%; background: #f59e0b; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 90%; background: #ff4655; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 50%; background: #f59e0b; border-radius: 4px;"></div>
+          <div style="width: 4px; height: 80%; background: #ff4655; border-radius: 4px;"></div>
+        </div>
+
+        <!-- Enter / Skip Button -->
+        <button id="rohan-intro-skip-btn" style="margin-top: 28px; padding: 10px 28px; border-radius: 14px; background: linear-gradient(90deg, #ff4655, #f59e0b); border: none; color: #000; font-size: 14px; font-weight: 900; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 20px rgba(255,70,85,0.6); font-family: 'Orbitron', 'Hind Siliguri', sans-serif;">
+          গেমে প্রবেশ করুন (ENTER GAME) ➔
+        </button>
+      </div>
+
+      <!-- Footer Info -->
+      <div style="position: absolute; bottom: 14px; font-size: 11px; color: #64748b; letter-spacing: 1px; font-family: monospace;">
+        ROHAN BATTEL CLUB • DEVELOPER: MUKUL AHMED • PWA READY
+      </div>
+    </div>
+
+    <!-- 2. PWA INSTALL BUTTON (Non-intrusive in top corner) -->
+    <button id="pwa-install-banner">
+      <span>📲</span>
+      <span>অ্যাপ ইনস্টল করুন (Install PWA)</span>
+    </button>
+
+    <!-- 3. THE COMPLETE GAME ROOT -->
+    <div id="root"></div>
+
+    <!-- Load User's Game Bundle & Styles -->
+    <script type="module" crossorigin src="/assets/index-DXNO3cYh.js"></script>
+
+    <!-- Intro Animation & PWA Install Logic -->
+    <script>
+      // Intro Animation Logic
+      (function() {
+        const intro = document.getElementById('rohan-game-intro');
+        const skipBtn = document.getElementById('rohan-intro-skip-btn');
+        let completed = false;
+
+        function closeIntro() {
+          if (completed) return;
+          completed = true;
+          if (intro) {
+            intro.style.opacity = '0';
+            intro.style.transform = 'scale(1.04)';
+            setTimeout(() => {
+              intro.style.display = 'none';
+            }, 700);
+          }
+        }
+
+        // Play intro audio
+        try {
+          const introAudio = new Audio('/assets/aistudio/sfx/company_logo.mp3');
+          introAudio.volume = 0.8;
+          introAudio.play().catch(() => {});
+        } catch(e) {}
+
+        if (skipBtn) skipBtn.addEventListener('click', closeIntro);
+        if (intro) intro.addEventListener('click', closeIntro);
+
+        // Auto close after 3.8s
+        setTimeout(closeIntro, 3800);
+      })();
+
+      // PWA Installation & Service Worker Register
+      (function() {
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch((err) => {
+              console.log('SW registration error:', err);
+            });
+          });
+        }
+
+        let deferredPrompt = null;
+        const installBtn = document.getElementById('pwa-install-banner');
+
+        // Check if already in standalone mode
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+        if (!isStandalone) {
+          window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (installBtn) {
+              installBtn.style.display = 'inline-flex';
+            }
+          });
+        }
+
+        if (installBtn) {
+          installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) {
+              alert('ফোনে হোমস্ক্রিনে অ্যাড করতে ব্রাউজার মেনুর "Add to Home Screen" অপশন ব্যবহার করুন।');
+              return;
+            }
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+              installBtn.style.display = 'none';
+            }
+            deferredPrompt = null;
+          });
+        }
+
+        window.addEventListener('appinstalled', () => {
+          if (installBtn) installBtn.style.display = 'none';
+        });
+      })();
+    </script>
+  </body>
+</html>
